@@ -6,7 +6,12 @@ import { auth } from './../firebase';
 function Dashboard() {
 
     const [user] = useAuthState(auth);
-    console.log(user);
+    // console.log(user);
+
+    if (!user) {
+    navigate("/login");  
+    return null;
+  }
 
 
     return (

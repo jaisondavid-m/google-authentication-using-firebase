@@ -19,7 +19,7 @@ function App() {
        <BrowserRouter>
           <Routes>
              <Route path='/' element={user ? <Navigate to="/dashboard" /> : <Login />}/>
-             <Route path='/dashboard' element={user ? <Dashboard/> : <Navigate to="/dashboard" />}/>
+             <Route path='/dashboard' element={user ? <Dashboard/> : <Login />}/>
           </Routes>
        </BrowserRouter>
     </div>
